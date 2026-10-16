@@ -1,0 +1,165 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #f4f4f8;
+  background: #090b13;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 85% 0%, #25143f 0%, transparent 38%),
+    radial-gradient(ellipse at 0% 45%, #101d37 0%, transparent 35%),
+    #090b13;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #a78bfa;
+  color: #090b13;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(20, 23, 37, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.luxe-gradient {
+  background: linear-gradient(120deg, #a78bfa, #818cf8 48%, #67e8f9);
+}
+
+.luxe-text {
+  background: linear-gradient(100deg, #c4b5fd, #818cf8 55%, #67e8f9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  background: linear-gradient(155deg, #191c2c, #10121d 72%);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(167, 139, 250, 0.55);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.3),
+    0 0 24px rgba(129, 140, 248, 0.08);
+}
+
+.product-image-stage {
+  background:
+    radial-gradient(ellipse at center, rgba(129, 140, 248, 0.17), transparent 70%),
+    #141725;
+}
+
+.luxe-input {
+  width: 100%;
+  border: 1px solid #303348;
+  border-radius: 12px;
+  background: #111421;
+  padding: 12px 14px;
+  color: #f4f4f8;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.luxe-input::placeholder {
+  color: #72778f;
+}
+
+.luxe-input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.12);
+}
+
+.luxe-input option {
+  background: #111421;
+  color: #f4f4f8;
+}
+
+.luxe-button {
+  border: 1px solid rgba(196, 181, 253, 0.25);
+  border-radius: 12px;
+  background: linear-gradient(110deg, #8b5cf6, #6366f1);
+  color: white;
+  font-weight: 700;
+  transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+}
+
+.luxe-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.12);
+  box-shadow: 0 8px 28px rgba(139, 92, 246, 0.24);
+}
+
+.luxe-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+@keyframes luxe-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: luxe-appear 0.45s ease-out both;
+}
+
+.custom-scrollbar {
+  scrollbar-color: #38334e #111421;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
