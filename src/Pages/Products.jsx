@@ -1,8 +1,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import Navbar from "../components/Navbar.jsx";
-import ProductCard from "../components/ProductCard.jsx";
-import ProductForm from "../components/ProductForm.jsx";
+import Navbar from "../Components/Navbar.jsx";
+import ProductCard from "../Components/ProductCard.jsx";
+import ProductForm from "../Components/ProductForm.jsx";
 
 const API_URL = "https://dummyjson.com/products?limit=30";
 

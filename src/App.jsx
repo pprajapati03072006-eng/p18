@@ -1,6 +1,6 @@
 
 import { Routes, Route, Navigate } from "react-router-dom";
-import Products from "./pages/Products";
+import Products from "./Pages/Products";
 
 export default function App() {
   return (
